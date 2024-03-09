@@ -1,23 +1,37 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+
+import Home from "./pages/Home";
+import Today from "./pages/Today";
+import Developer from "./pages/Developer";
+import Gsap from "./pages/Gsap";
+import Youtube from "./pages/Youtube";
+import Webd from "./pages/Webd";
+import Website from "./pages/Website";
+import Not from "./pages/Not";
+import Search from "./pages/Search";
+import Video from "./pages/Video";
+import Channel from "./pages/Channel";
+import Port from "./pages/Port";
+
 
 class App extends Component {
     render() {
         return (
             <BrowserRouter>
                 <Routes>
-                    <Route pate = '/' element = {<Home/>}/>
-                    <Route pate = '/today' element = {<Today/>} />
-                    <Route pate = '/developer' element = {<Developer/>} />
-                    <Route pate = '/webd' element = {<Webd/>} />
-                    <Route pate = '/webstie' element = {<Webstie/>} />
-                    <Route pate = '/gsap' element = {<Gsap/>} />
-                    <Route pate = '/port' element = {<Port/>} />
-                    <Route pate = '/youtube' element = {<Youtube/>} />
-                    <Route pate = '/channel/:channelID' element = {<Channel/>} />
-                    <Route pate = '/video/:videoID' element = {<Video/>} />
-                    <Route pate = '/search/:searchID' element = {<Search/>} />
-                    <Route pate = '/*' element = {<Home/>} />
+                    <Route path = '/' element = {<Home/>}/>
+                    <Route path = '/today' element = {<Today/>} />
+                    <Route path = '/developer' element = {<Developer/>} />
+                    <Route path = '/webd' element = {<Webd/>} />
+                    <Route path = '/webstie' element = {<Website/>} />
+                    <Route path = '/gsap' element = {<Gsap/>} />
+                    <Route path = '/port' element = {<Port/>} />
+                    <Route path = '/youtube' element = {<Youtube/>} />
+                    <Route path = '/channel/:channelID' element = {<Channel/>} />
+                    <Route path = '/video/:videoID' element = {<Video/>} />
+                    <Route path = '/search/:searchID' element = {<Search/>} />
+                    <Route path = '/*' element = {<Not/>} />
                 </Routes>
             </BrowserRouter>
         );
