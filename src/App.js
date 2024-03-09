@@ -1,14 +1,28 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import {BrowserRouter, Routes} from "react-router-dom";
 
 class App extends Component {
     render() {
         return (
-            <div>app</div>
+            <BrowserRouter>
+                <Routes>
+                    <Route pate = '/' element = {<Home/>}/>
+                    <Route pate = '/today' element = {<Today/>} />
+                    <Route pate = '/developer' element = {<Developer/>} />
+                    <Route pate = '/webd' element = {<Webd/>} />
+                    <Route pate = '/webstie' element = {<Webstie/>} />
+                    <Route pate = '/gsap' element = {<Gsap/>} />
+                    <Route pate = '/port' element = {<Port/>} />
+                    <Route pate = '/youtube' element = {<Youtube/>} />
+                    <Route pate = '/channel/:channelID' element = {<Channel/>} />
+                    <Route pate = '/video/:videoID' element = {<Video/>} />
+                    <Route pate = '/search/:searchID' element = {<Search/>} />
+                    <Route pate = '/*' element = {<Home/>} />
+                </Routes>
+            </BrowserRouter>
         );
     }
 }
 
-App.propTypes = {};
 
 export default App;
