@@ -13,26 +13,33 @@ import Search from "./pages/Search";
 import Video from "./pages/Video";
 import Channel from "./pages/Channel";
 import Port from "./pages/Port";
+import Header from "./components/section/Header";
+import Footer from "./components/section/Footer";
+import Main from "./components/section/Main";
 
 
 class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <Routes>
-                    <Route path = '/' element = {<Home/>}/>
-                    <Route path = '/today' element = {<Today/>} />
-                    <Route path = '/developer' element = {<Developer/>} />
-                    <Route path = '/webd' element = {<Webd/>} />
-                    <Route path = '/webstie' element = {<Website/>} />
-                    <Route path = '/gsap' element = {<Gsap/>} />
-                    <Route path = '/port' element = {<Port/>} />
-                    <Route path = '/youtube' element = {<Youtube/>} />
-                    <Route path = '/channel/:channelID' element = {<Channel/>} />
-                    <Route path = '/video/:videoID' element = {<Video/>} />
-                    <Route path = '/search/:searchID' element = {<Search/>} />
-                    <Route path = '/*' element = {<Not/>} />
-                </Routes>
+                <Header />
+                <Main>
+                    <Routes>
+                        <Route path='/' element={<Home/>}/>
+                        <Route path='/today' element={<Today/>}/>
+                        <Route path='/developer' element={<Developer/>}/>
+                        <Route path='/webd' element={<Webd/>}/>
+                        <Route path='/webstie' element={<Website/>}/>
+                        <Route path='/gsap' element={<Gsap/>}/>
+                        <Route path='/port' element={<Port/>}/>
+                        <Route path='/youtube' element={<Youtube/>} />
+                        <Route path='/channel/:channelID' element={<Channel/>}/>
+                        <Route path='/video/:videoID' element={<Video/>}/>
+                        <Route path='/search/:searchID' element={<Search/>}/>
+                        <Route path='/*' element={<Not/>} />
+                    </Routes>
+                </Main>
+                <Footer/>
             </BrowserRouter>
         );
     }
